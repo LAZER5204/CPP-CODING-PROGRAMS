@@ -1,0 +1,71 @@
+#include <iostream>
+using namespace std;
+class shape{
+    protected:
+        int length,breadth,height;
+};
+class square:public shape{
+    public:
+        square(int l){
+            length=l;
+        }
+        int area(){
+            return length*length;
+        }
+        
+};
+class rectangle:public shape{
+    public:
+        rectangle(int l,int b){
+            length=l;
+            breadth=b;
+        }
+        int area(){
+            return length*breadth;
+        }
+        
+};
+class triangle:public shape{
+    public:
+        triangle(int l,int h){
+            length=l;
+            height=h;
+        }
+        int area(){
+            return 0.5*length*height;
+        }
+        
+};
+class parallelogram:public shape{
+    public:
+        parallelogram(int l,int h){
+            length=l;
+            height=h;
+        }
+        int area(){
+            return length*height;
+        }
+        
+};
+class circle:public shape{
+    public:
+        circle(int l){
+            length=l;
+        }
+        float area(){
+            return 3.14*length*length;
+        }
+        
+};
+int main(){
+    square sq(10);
+    cout<<sq.area()<<endl;
+    rectangle rec(10,20);
+    cout<<rec.area()<<endl;
+    triangle tri(5,6);
+    cout<<tri.area()<<endl;
+    parallelogram para(5,6);
+    cout<<para.area()<<endl;
+    circle cir(8);
+    cout<<cir.area()<<endl;
+}
